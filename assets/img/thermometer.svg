@@ -1,0 +1,105 @@
+<svg class="thermo" height="580" width="180" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+  
+  <rect x="80" y="0" width="25" height="530" style="fill:#cccccc;stroke:none" />
+  <circle cx="93" cy="540" r="18" stroke="#cccccc" stroke-width="6" fill="#f34e54" />
+  <rect x="87" y="6" width="11" height="530" style="fill:#f34e54;stroke:none" />
+  <rect id="tempgrad" x="87" y="6" width="11"  height="513"  style="fill:#cccccc; stroke:none"/>
+  
+  <polyline points="113,8 123,8" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,40 123,40" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,60 123,60" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,85 123,85" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,112 123,112" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,150 123,150" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,169 123,169" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,225 123,225" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,300 123,300" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="113,6 113,520 123,520" style="fill:none;stroke:#000;stroke-width:4" />
+
+  
+  <polyline points="62,40 72,40" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="62,85 72,85" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="62,112 72,112" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="62,169 72,169" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="62,300 72,300" style="fill:none;stroke:#000;stroke-width:4" />
+  <polyline points="72,6 72,520 62,520" style="fill:none;stroke:#000;stroke-width:4" />
+
+  <text x="128" y="12">75&deg;C</text>
+  <text x="128" y="46">57&deg;C</text>
+
+  <a id="50deg" data-add="50" cursor="pointer">
+    <g data-add="54">
+      <rect x="125" y="50" width="50" height="20" style="fill:#cccccc;"/>
+    	<text x="128" y="65">50&deg;C</text>
+    </g>
+  </a>
+
+  <text x="128" y="90">37&deg;C</text>
+
+  <a id="20deg" data-add="20" cursor="pointer">
+    <g data-add="107">
+      <rect x="125" y="101" width="50" height="20" style="fill:#cccccc;"/>
+    	<text data-add="107" x="128" y="117">20&deg;C</text>
+    </g>
+  </a>
+
+  <a id="2deg" data-add="2" cursor="pointer">
+    <g data-add="143">
+      <rect x="125" y="140" width="50" height="20" style="fill:#cccccc;"/>
+    	<text x="128" y="155">2&deg;C</text>
+    </g>
+  </a>
+
+  <text x="128" y="175">0&deg;C</text>
+
+  <a id="n15deg" data-add="-15" cursor="pointer">
+    <g data-add="218">
+      <rect x="125" y="213" width="50" height="20" style="fill:#cccccc;"/>
+      <text x="128" y="229">-15&deg;C</text>
+    </g>
+  </a>
+
+  <a id="n89deg" data-add="-89" cursor="pointer">
+    <g data-add="293">
+      <rect x="125" y="289" width="50" height="20" style="fill:#cccccc;"/>
+    	<text x="128" y="304">-89&deg;C</text>
+    </g>
+  </a>
+
+  <a id="n273deg" data-add="-273" cursor="pointer">
+    <g data-add="513">
+      <rect x="125" y="509" width="50" height="20" style="fill:#cccccc;"/>
+    	<text x="128" y="524">-273&deg;C</text>
+    </g>
+  </a>
+
+    <text>
+        <tspan x="0" y="14">Hottest</tspan>
+        <tspan x="0" y="29">recorded</tspan>
+        <tspan x="0" y="41">air temp.</tspan>
+        <tspan x="0" y="53">on earth</tspan>
+    </text>
+    
+    <text x="0" y="604">
+        <tspan x="17" y="80">Body</tspan>
+        <tspan x="17" y="91">temp.</tspan>
+    </text>
+    <text x="0" y="604">
+        <tspan x="17" y="114">Room</tspan>
+        <tspan x="17" y="126">temp.</tspan>
+    </text>
+    <text x="0" y="604">
+        <tspan x="17" y="170">Water</tspan>
+        <tspan x="13" y="184">freezes</tspan>
+    </text>
+    <text>
+        <tspan x="0" y="285">Coldest</tspan>
+        <tspan x="0" y="299">recorded</tspan>
+        <tspan x="0" y="313">air temp.</tspan>
+        <tspan x="0" y="325">on earth</tspan>
+    </text>
+  	<text x="0" y="604">
+        <tspan x="0" y="524">absolute</tspan>
+        <tspan x="0" y="534">zero</tspan>
+    </text>
+</svg>

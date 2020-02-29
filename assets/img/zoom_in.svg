@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="frozenparts" class="hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="286.312" height="280.199">
+  <linearGradient id="a">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset=".859" stop-color="#fff" stop-opacity=".382"/>
+    <stop offset="1" stop-color="#fff" stop-opacity=".28"/>
+  </linearGradient>
+  <radialGradient id="c" cx="75.646" cy="-73.819" r="26.568" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="d" cx="115.665" cy="-34.023" r="19.795" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <radialGradient id="e" cx="191.015" cy="76.567" r="72.693" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff" stop-opacity=".71"/>
+    <stop offset=".296" stop-color="#fcfeff" stop-opacity=".713"/>
+    <stop offset=".495" stop-color="#f3f9ff" stop-opacity=".715"/>
+    <stop offset=".666" stop-color="#e4f2ff" stop-opacity=".717"/>
+    <stop offset=".821" stop-color="#cfe7ff" stop-opacity=".718"/>
+    <stop offset=".964" stop-color="#b3daff" stop-opacity=".72"/>
+    <stop offset="1" stop-color="#abd6ff" stop-opacity=".72"/>
+  </radialGradient>
+  <linearGradient id="f" x1="86.786" x2="296.298" y1="64.37" y2="79.021" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#8b8e90"/>
+    <stop offset=".33" stop-color="#e0e0df"/>
+    <stop offset="1" stop-color="#757777"/>
+  </linearGradient>
+  <linearGradient id="b">
+    <stop offset="0" stop-color="#a7aaab"/>
+    <stop offset=".24" stop-color="#fff"/>
+    <stop offset=".37" stop-color="#efeeed"/>
+    <stop offset=".45" stop-color="#8b8e90"/>
+    <stop offset=".82" stop-color="#5a5d5e"/>
+    <stop offset=".9" stop-color="#e0e0df"/>
+    <stop offset="1" stop-color="#a7aaab"/>
+  </linearGradient>
+  <linearGradient id="g" x1="118.666" x2="130.631" y1="136.653" y2="147.811" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="h" x1="109.936" x2="125.53" y1="142.283" y2="156.825" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="i" x1="70.956" x2="57.319" y1="207.491" y2="194.322" gradientUnits="userSpaceOnUse">
+    <stop offset="0"/>
+    <stop offset=".201" stop-color="#5a5d5e"/>
+    <stop offset=".48"/>
+    <stop offset=".756" stop-color="#e0e0df"/>
+    <stop offset="1"/>
+  </linearGradient>
+  <linearGradient id="j" x1="105.607" x2="126.122" y1="142.994" y2="162.125" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#5a5d5e"/>
+    <stop offset="1"/>
+  </linearGradient>
+  <linearGradient id="k" x1="128.497" x2="144.341" y1="122.77" y2="137.546" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
+  <linearGradient id="l" x1="131.006" x2="165.65" y1="45.424" y2="60.222" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff" stop-opacity=".71"/>
+    <stop offset=".875" stop-color="#fff" stop-opacity=".203"/>
+    <stop offset="1" stop-color="#fff" stop-opacity=".13"/>
+  </linearGradient>
+  <radialGradient id="m" cx="203.886" cy="69.25" r="51.76" gradientTransform="matrix(-.6607 -.722 .7377 -.6751 297.22 275.368)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset=".865" stop-color="#fff" stop-opacity=".377"/>
+    <stop offset="1" stop-color="#fff" stop-opacity=".28"/>
+  </radialGradient>
+  <circle cx="61.922" cy="-22.844" r="77.545" fill="none"/>
+  <path fill="url(#c)" d="M103.101-59.045l7.091-6.568c-11.243-14.034-28.265-22.98-47.317-22.98a59.605 59.605 0 0 0-21.774 4.111 72.602 72.602 0 0 1 6.578-.316c22.072 0 41.874 9.967 55.422 25.753z"/>
+  <path fill="url(#d)" d="M107.157-53.9c9.083 12.639 14.46 28.27 14.46 45.197 0 .452-.025.898-.033 1.35a64.759 64.759 0 0 0 2.589-18.155c0-13.028-3.84-25.133-10.415-35.184z"/>
+  <path fill="gray" fill-rule="evenodd" d="M133.607 26.497c26.174-29.815 73.396-33.793 105.475-8.885 16.75 13.008 26.053 31.321 27.395 50.097-2.924-16.232-11.873-31.646-26.508-43.009-32.077-24.909-79.3-20.93-105.473 8.884-12.508 14.246-17.941 31.813-16.713 48.991-3.487-19.349 1.59-39.864 15.824-56.078z" clip-rule="evenodd"/>
+  <path fill="url(#e)" fill-rule="evenodd" d="M132.935 31.467C159.111 1.65 206.333-2.326 238.41 22.582s36.861 69.271 10.686 99.087-73.398 33.793-105.475 8.885c-32.077-24.909-36.862-69.273-10.686-99.087z" clip-rule="evenodd"/>
+  <path fill="#4d4d4d" fill-rule="evenodd" d="M117.507 87.674l9.938 19.687 13.125 15.563 12.375 9.75 12.951 5.027 9.924 2.848 12.375 1.71 11.437-.585 17.438-3.375 15.187-7.125 14.625-11.063 9.75-11.812-4.687 10.125-10.5 10.312-15.938 10.688-14.25 5.062-16.125 1.688-20.25-.938-18.562-6.562-15.375-8.625-12.188-14.063-7.875-13.312-3.75-12.188z" clip-rule="evenodd"/>
+  <path fill="#666" fill-rule="evenodd" d="M265.041 86.75c-1.299 13.484-6.762 26.717-16.582 37.901-26.174 29.815-73.396 33.793-105.473 8.884-21.527-16.715-30.762-42.191-26.596-66.154-2.164 22.461 7.223 45.621 27.266 61.186 32.076 24.909 79.299 20.932 105.475-8.885 8.609-9.807 13.869-21.188 15.91-32.932z" clip-rule="evenodd"/>
+  <path fill="url(#f)" d="M132.392 25.77C145.738 10.569 164.439 1.947 183.89.293c19.453-1.652 39.65 3.666 55.979 16.346s25.703 30.326 27.658 48.604c1.955 18.275-3.506 37.178-16.852 52.379-13.344 15.199-32.047 23.822-51.496 25.475-19.455 1.654-39.652-3.664-55.98-16.344s-25.703-30.326-27.658-48.605c-1.956-18.275 3.507-37.178 16.851-52.378zm51.789-22.836c-18.727 1.592-36.738 9.897-49.594 24.54-12.855 14.644-18.117 32.849-16.236 50.444 1.883 17.592 10.912 34.58 26.639 46.793 15.729 12.214 35.174 17.336 53.896 15.745 18.729-1.591 36.738-9.897 49.594-24.54s18.119-32.848 16.236-50.443c-1.883-17.593-10.91-34.58-26.639-46.794-15.728-12.213-35.171-17.335-53.896-15.745z"/>
+  <path fill="url(#m)" d="M238.573 28.146c23.819 26.031 21.568 66.862-5.03 91.201-13.151 12.034-29.79 17.771-46.135 17.362 17.884 2.077 36.692-3.416 51.194-16.687 26.19-23.966 28.407-64.173 4.954-89.804a61.526 61.526 0 0 0-23.664-16.049 62.5 62.5 0 0 1 18.681 13.977z"/>
+</svg>

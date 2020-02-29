@@ -1,0 +1,166 @@
+body{
+	background-color: #eeeeee;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2{
+	font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+select{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  height: 30px;
+  width: 70px;
+  border: none;
+}
+.flex-container {
+  display: flex;
+}
+.flex-child{
+  width: 33.3%;
+}
+
+.module-container{
+  width: 100%;
+  
+}
+
+.module-wrapper{
+  margin: 0 auto;
+  padding: 30px;
+  min-width: 780px;
+  max-width: 1000px;
+  overflow: auto;
+  background-color:none;
+}
+
+/* Title */
+
+.module-title{
+  text-align: center;
+}
+
+/* THERMOMETER */
+.thermometer{
+  /*float: left;*/
+}
+
+
+.thermowraper{
+  width: 100%;
+   font-weight: 300;
+}
+.degselct, .thermo a:hover{
+  font-weight: 400;
+}
+
+.tempgrad{
+  height:163;
+}
+
+.glass {
+  background: #cccccc;
+  border-radius: 100px 100px 0 0;
+  display: block;
+  height: 300px;
+  margin: 0 15px -5px;
+  padding: 5px;
+  position: relative;
+  width: 20px;
+}
+
+.bulb {
+  background: #cccccc;
+  border-radius: 100px;
+  display: block;
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+}
+.red-spirit {
+  background: #f34e54;
+  border-radius: 100px;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+.filler {
+  background: #f34e54;
+  border-radius: 100px 100px 0 0;
+  display: block;
+  height: 30px;
+  width: 20px;
+  position: relative;
+  top: -65px;
+  right: -15px;
+  z-index: 30;
+}
+
+/* MATTER STATE DISPLAY*/
+
+
+.matter-state{
+  
+}
+
+.matter-state h1{
+  margin-top: 20%; 
+}
+.matter-state img{
+	cursor: url(../assets/img/loupe.svg), auto;
+  margin-top: 30%;
+}
+
+/* Hide the ice or the water */
+.hide{
+  display: none;
+}
+.elements{
+  
+}
+.magnified{
+}
+
+#molcol{
+  margin-bottom: 15px;
+}
+
+.molcol{
+  margin-top: 20%;
+  margin-left: 20%;
+}
+
+#viewzone{
+  width: 200px;
+  height: 200px;
+  margin: 20% auto 0;
+}
+
+.pjs-layer-main{
+  border: 3px solid #000;
+  border-radius: 50%;
+ }
+.p5Canvas{
+  border-radius: 50%;
+  margin-top: 30%;
+  margin-left: 20%;
+}
+#frozenparts{
+  width: 250px;
+  height: 250px;
+  margin: 30% auto 0;
+  border: 3px solid #000;
+  border-radius: 50%;
+  background-image: url(../assets/img/particuls.svg);
+}
+
+@media (min-width: 782px) {
+  .matter-state {
+    
+}
+}
+
+/* PARTICLES */
+
