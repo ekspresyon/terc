@@ -105,14 +105,31 @@ select{
   
 }
 
+#degOutpt{
+  margin-bottom: 10px;
+}
+
 .matter-state h1{
-  margin-top: 20%; 
+  margin-top: 5%; 
 }
 .matter-state img{
 	cursor: url(../assets/img/loupe.svg), auto;
   margin-top: 30%;
 }
 
+#waterflk{
+  height: 250px;
+}
+
+#ballon{
+  margin-top: 0;
+  margin-left: 120px;
+  height: 119px; 
+}
+
+.mt-0{
+margin-top: 0 !important; 
+}
 /* Hide the ice or the water */
 .hide{
   display: none;
@@ -123,7 +140,7 @@ select{
 .magnified{
 }
 
-#molcol{
+#molcolsel{
   margin-bottom: 15px;
 }
 
@@ -155,12 +172,4 @@ select{
   border-radius: 50%;
   background-image: url(../assets/img/particuls.svg);
 }
-
-@media (min-width: 782px) {
-  .matter-state {
-    
-}
-}
-
-/* PARTICLES */
 

@@ -89,7 +89,7 @@ function setup(airnmbr,aircolor,bubbleColr, xyrand) {
 
 function draw(xyrand) {
   background(255);
-  console.log(xyrand)
+  // console.log(xyrand)
   //outer loop sets rules for initial balls
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].move();

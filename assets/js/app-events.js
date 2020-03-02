@@ -21,6 +21,11 @@ var degcanvas15 = document.getElementById("15degcanvas")
 var degcanvas2 = document.getElementById("2degcanvas")
 var degcanvas20 = document.getElementById("20degcanvas")
 var degcanvas50 = document.getElementById("50degcanvas")
+var molcolid = document.getElementById("molcolsel")
+var molcolabl = document.getElementsByTagName("label")
+var airmol = document.getElementById("airmol")
+var watermol = document.getElementById("watermol")
+var ballon = document.getElementById("ballon")
 
 var height = temprect
 
@@ -56,6 +61,13 @@ function changeTemptxt(){
 	}
 }
 
+function molcolattset(){
+	molcolid.removeAttribute("disabled")
+	ballon.className = ""
+	waterflk.classList.add("mt-0")
+	
+}
+
 function particlesactn(){
 	var theid = this.getAttribute("id")
 	console.log(theid)
@@ -64,27 +76,42 @@ function particlesactn(){
 			for (var i = 0; i < loupeviewEl.length; i++) {
 				loupeviewEl[i].className = "hide"
 			}
-			frozen.className = ""	
+			ballon.className = "hide"
+			frozen.className = ""
+			molcolabl[0].className = 'hide'
+			console.log(molcolabl[0].molcolid)
+			molcolid.setAttribute("disabled","true")
 			break
 		case 'n89deg':
 			for (var i = 0; i < loupeviewEl.length; i++) {
 				loupeviewEl[i].className = "hide"
 			}
-			frozen.className = ""	
+			frozen.className = ""
+			molcolabl[0].className = ''
+			molcolid.setAttribute("disabled","true")
+			icecube.classList.add("mt-0")
+			ballon.className = ""
 			break
 		case 'n15deg':
 			for (var i = 0; i < loupeviewEl.length; i++) {
 				loupeviewEl[i].className = "hide"
 			}
-			frozen.className = ""	
+			frozen.className = ""
+			molcolabl[0].className = ''
+			molcolid.setAttribute("disabled","true")
+			icecube.classList.add("mt-0")
+			ballon.className = ""
 			break
 		case '2deg':
 			for (var i = 0; i < loupeviewEl.length; i++) {
 				loupeviewEl[i].className = "hide"
 			}
 			degcanvas50.className = ""
-			console.log("2 degrees")	
 			xyrand = 0.5
+			molcolabl[0].className = ''
+			molcolattset()
+			
+			// molcolabl[0].molcol.removeAttribute("disadled")
 			break
 		case '20deg':
 			for (var i = 0; i < loupeviewEl.length; i++) {
@@ -92,13 +119,17 @@ function particlesactn(){
 			}
 			degcanvas50.className = ""
 			xyrand = 2
+			molcolabl[0].className = ''
+			molcolattset()
 			break
 		case '50deg':
 			for (var i = 0; i < loupeviewEl.length; i++) {
 				loupeviewEl[i].className = "hide"
 			}
 			degcanvas50.className = ""
-			xyrand = 6	
+			xyrand = 6
+			molcolabl[0].className = ''
+			molcolattset()
 			break
 		default:
 			for (var i = 0; i < loupeviewEl.length; i++) {
@@ -114,4 +145,11 @@ function showloupe(){
 function boldtemp(){
 	this.className = "degselct"
 	console.log(this)
+}
+
+function chgaircol(value){
+	airmol.setAttribute("fill", value)
+}
+function chgwtrcol(value){
+	watermol.setAttribute("fill", value)
 }
