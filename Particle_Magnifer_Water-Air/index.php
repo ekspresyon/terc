@@ -29,7 +29,7 @@
 					<div class="molcol">
 						<label class="hide">
 							<select id="molcolsel" onchange="chgaircol(this.value)" disabled>
-								<option value="#2ade5a">gree</option>
+								<option value="#2ade5a">green</option>
 								<option value="#000000">black</option>
 								<option value="#632a07">brown</option>
 							</select> 
