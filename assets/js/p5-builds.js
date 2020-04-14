@@ -1,105 +1,198 @@
-var xyrand = ''
+// Settings
+// What size should the frame be?
+const frame_height = 250
+const frame_width = 250
 
-class Bubble {
-	
-  constructor(x, y, rad, col, xyrand) {
-    this.x = x;
-    this.y = y;
-    this.xSpeed = random(xyrand, 1);
-    this.ySpeed = random(xyrand, 1);
-    this.rad = rad;
-    this.col = col;
-    this.switched = false;
+// Howmany molecules do you wnat to see?
+const water_molecules = 60 // water
+const air_molecules = 0 // air
 
-  }
-  move() {
-    this.x = this.x + this.xSpeed;
-    this.y = this.y + this.ySpeed;
-  }
-  display() {
-    noStroke();
-    fill(this.col);
-    ellipse(this.x, this.y, this.rad * 2, this.rad * 2);
-  }
-  bounce() {
-    if (this.x <= 0 || this.x >= width) {
-      this.xSpeed = this.xSpeed * -1;
-    }
-    if (this.y <= 0 || this.y >= height) {
-      this.ySpeed = this.ySpeed * -1;
-    }
+// How big should a molecule be?
+const diameter = 20
 
-  }
-  grow() {
-    if (this.x <= 500 && this.rad < 5) {
-      this.rad++;
-    }
-  }
-  shrink() {
-    if (this.y <= 200 || this.y >= 400) {
-      this.rad--;
-    }
-  }
-  changeColor() {
-    if (this.switched) {
-      this.col = color(255, 255, 255);
-    } else {
-      this.col = color(255, 0, 0);
-    }
-  }
+// Variables
+var separation = 30
+var wmolnum = water_molecules
+var amolnum = air_molecules
+var ae = document.getElementById("molcolsel")
 
-  changeDirection() {
-    this.xSpeed = this.xSpeed * -1;
-    this.ySpeed = this.ySpeed * -1;
-  }
-  //the 'intersects' function has a parameter of other.  It compares the distance
-  //of 'this' bubble with another bubble where the x/y is being passed in
-  intersects(other) {
-    let distance = dist(this.x, this.y, other.x, other.y);
-    if (distance <= this.rad + other.rad) {
 
-      return true;
-    } else {
-      return false;
-    }
+var spd = {}
+var s = '' // all it needed was the '' marks... Why the fk?
+var bnc
 
+
+var molecules_w = []
+var molecules_a = []
+
+function wmolamp(){
+  amplitude = temprect.getAttribute("height")
+  switch (amplitude){
+    case '513':
+      s = 0
+      bnc = false
+      break
+    case '293':
+      if(chkair == true){
+        s = 1.5
+        bnc = false
+      }else{
+        s = 1.5
+        bnc = true
+      }
+      break
+    case '218':
+      if(chkair == true){
+        s = 3
+        bnc = false
+      }else{
+        s = 2
+        bnc = true
+      }
+      break
+    case '143':
+      s = 2.5
+      bnc = true
+      break
+    case '107':
+      s = 3.5
+      bnc = true
+      break
+    case '54':
+      s = 6
+      bnc = true
+      break
   }
 }
-
-
-let bubbles = [];
-var bubbleColr = parseInt('243, 78, 84')
-let air = []
-var airnmbr = 0
-var aircolor = parseInt('203, 7, 64')
-
-function setup(airnmbr,aircolor,bubbleColr, xyrand) {
-
-  let partcanvas = createCanvas(250, 250);
-  partcanvas.parent('50degcanvas')
   
-  for (let i = 0; i < 200; i++) {
-    bubbles[i] = new Bubble(random(width), random(height), 10, color(243, 78, 84));
+function checkspeed() {
+  if (spd.old == s) {
+    return
+
+  } else {
+    spd.old = s
+    refill() // Replenish arrays with new speed value      
   }
-  // for (let j = 0; j < 3; j++) {
-  //   air[j] = new Bubble(random(width), random(height), 10, color(aircolor));
-  // }
+}
+
+// Get and display molecule colors on change
+function updatecolors() {
+
+  var we = document.getElementById("molcol");
+  var wresult = we.options[we.selectedIndex].value;
+
+  switch (wresult) {
+    case '1':
+      wr = 255
+      wg = 0
+      wb = 0
+      break
+    case '2':
+      wr = 245
+      wg = 121
+      wb = 10
+      break
+    case '3':
+      wr = 205
+      wg = 0
+      wb = 116
+      break
+  }
+
+  
+  if (ae != null){
+  var aresult = ae.options[ae.selectedIndex].value;
+
+  switch (aresult) {
+    case '1':
+      ar = 0
+      ag = 238
+      ab = 0
+      break
+    case '2':
+      ar = 0
+      ag = 0
+      ab = 0
+      break
+    case '3':
+      ar = 170
+      ag = 120
+      ab = 56
+      break
+  }
+}else{
+  return
+}
 
 }
 
-function draw(xyrand) {
-  background(255);
-  // console.log(xyrand)
-  //outer loop sets rules for initial balls
-  for (let i = 0; i < bubbles.length; i++) {
-    bubbles[i].move();
-    bubbles[i].display();
-    bubbles[i].bounce();
+// draw all the molecules
+function drawWaters() {
+  for (let i of molecules_w) {
+    i.aspect(wr, wg, wb)
+    i.move()
+    i.bounce()
+  }
+}
 
+function drawAirs() {
+  
+  if(ae == null || chkair == true){ 
+    console.log("no air!")
+    return
   }
-  for (let j = 0; j < air.length; j++) {
-    air[j].move();
-    air[j].display();
-    air[j].bounce();
+  else{
+    for (let j of molecules_a) {
+      j.aspect(ar, ag, ab)
+      j.move()
+      j.bounce()
+    }
   }
+}
+
+function refill() {
+  if (chkair == true) {
+    wmolnum = water_molecules
+    amolnum = air_molecules
+  }
+  molecules_w = [] // Clear water molecule array
+  molecules_a = [] // Clear air molecule array
+  for (wm = 0; wm < wmolnum; wm++) {
+    molecules_w[wm] = new molecule()
+  }
+  for (am = 0; am < amolnum; am++) {
+    molecules_a[am] = new molecule()
+  }
+  console.log("Refill complete")
+}
+
+function drawmolecules() {
+  if (bnc != true) { 
+    for (y = random(-s, s); y <= height; y += separation) {
+      for (x = random(-s, s); x <= width; x += separation) {
+        fill(wr, wg, wb)
+        noStroke()
+        circle(x, y, diameter)
+      }
+    }
+  } else {
+    drawAirs()
+    drawWaters()
+  }
+}
+
+// Runs only once on load
+function setup() {
+  let partcanvas = createCanvas(frame_width, frame_height);
+  partcanvas.parent('degcanvas')
+  checkspeed()
+  refill()
+}
+
+function draw() {
+  background(220);
+  wmolamp()
+  checkspeed()
+  updatecolors()
+  drawmolecules()
 }
