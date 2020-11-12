@@ -19,16 +19,19 @@
 						<span id="waterOutput">Ice</span>
 					</h1>
 					<div class="elements">
-						<img id="ballon" src="../assets/img/ballon.svg" class="hide" alt="Air ballon">
-						<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
-						<img id="waterflk" class="hide" src="../assets/img/beaker.svg" alt="Water flask">
+						<img id="ballon" src="../assets/img/loupe.svg" class="" alt="Air ballon">
+						<div class="elcontainer" style="margin-top: 65px;">
+							<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
+							<div id="waterflk" class="hide">
+							</div>
+						</div>
 					</div> <!-- end .elements -->
 				</div> <!-- end .ice -->
 
 				<div class="magnified flex-child">
 					<div class="molcol">
-						<label id="airpartcolr"class="hidden">
-							<select id="molcolsel" onchange="chgaircol(this.value)" disabled>
+						<label id="airpartcolr">
+							<select id="molcolsel" onchange="chgaircol(this.value)">
 								<option value="1">green</option>
 								<option value="2">black</option>
 								<option value="3">brown</option>
@@ -53,11 +56,12 @@
 					<div id="loupe-view" class="hide">
 						
 						<div id="degcanvas" class=""></div>
+						<div id="scnctxt" class="hide"><p>At -273°C, there would be no gaseous form of matter. Nitrogen, oxygen, and all of the elements that usually compose our atmosphere would be solids before the temperature reached absolute zero.</p></div>
+						
 						
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
-
 	</div> <!-- end .module-container -->
 
 

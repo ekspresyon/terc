@@ -1,3 +1,4 @@
+
 var waIcAir = document.querySelectorAll(".elements img")
 var temps = document.querySelectorAll(".thermo a g")
 var tempstxt = document.querySelectorAll(".thermo a")
@@ -5,13 +6,14 @@ var temprect = document.getElementById("tempgrad")
 var degOutpt = document.getElementById("degOutpt")
 var waterOutput = document.getElementById("waterOutput")
 
+var scnctxt = document.getElementById("scnctxt")
 var loupeview = document.getElementById("loupe-view")
 var loupeviewEl = document.querySelectorAll("#loupe-view div")
 var icecube = document.getElementById("icecube")
 var icecube = document.getElementById("icecube")
 var waterflk = document.getElementById("waterflk")
 var ballon = document.getElementById("ballon")
-//var viewport = document.getElementById("viewzone")
+
 var frozen = document.getElementById("frozenparts")
 var p50deg = document.getElementById("50deg")
 var p20deg = document.getElementById("20deg")
@@ -28,217 +30,192 @@ var molcolid = document.getElementById("molcolsel")
 var molcolabl = document.getElementById("airpartcolr")
 var airmol = document.getElementById("airmol")
 var watermol = document.getElementById("watermol")
+
 var colred = "#ff0000"
 var colorange = "#F5790A"
 var colpurple = "#CD0074"
 var colgreen = "#00EE00"
 var colblack = "#000000"
 var colbrown = "#AA7838"
+
+/* Determines if air is frozen or not starts as true
+ will change to false if temp is higher than -273 degrees */
 var chkair = true
 
 var height = temprect
 var degrsmark
+var ballonactv = false
 
-if (ballon) {
-ballon.addEventListener("click", showAloupe)
-}
+
+// start listenning to clicks
 icecube.addEventListener("click", showloupe)
 waterflk.addEventListener("click", showloupe)
 
+// Only when looking at air and water module, start listenning to clicks on air
+if (ballon) {
+	ballon.addEventListener("click", showAloupe)
+}
+
+// Start listenning to clicks on thermometer temp values
 for (var i = 0; i < temps.length; i++) {
 	temps[i].addEventListener("click", changeTemp)
 	tempstxt[i].addEventListener("click", tempvalue)
 	tempstxt[i].addEventListener("click", tempctrl)
-	//tempstxt[i].addEventListener("click", particlesactn)
+	// tempstxt[i].addEventListener("click", particlesactn)
 }
 
+// Change displayed temperature on click of thermometer temp value
 function changeTemp(){
 	if (this.getAttribute("data-add")){
 		temprect.setAttribute("height", this.getAttribute("data-add"))
-	}
-	
+	}	
 }
+
+// Fetch temperature value on click of thermometer temp.
 function tempvalue(){
 	degrsmark = this.getAttribute("data-add")
 	return degrsmark
 }
 
+// Empelement state label change on click based on temp
 function changeTemptxt(){
-		console.log("temp change running")
-		if(chkair == true){
-			console.log(chkair)
-			console.log("air colors disabled")
+		if(chkair == true){			
 			if (degrsmark > 0) {
-				console.log("temparature is positive")
 				waterOutput.innerHTML = "Water"
-			}else{
-				console.log("temparature is negative")
+			}else{		
 				waterOutput.innerHTML = "Ice"
 			}
-		}else if(degrsmark == -273){
-			console.log("you clicked on -273")
+		}else if(degrsmark == -273){			
 			waterOutput.innerHTML = "Ice"
 		}else{
-			console.log("air colors enabled")
 			waterOutput.innerHTML = "Air and water"
 		}
 }
 		
-	
-
-function molcolattset(){
-	if (molcolabl) {
-		ballon.className = ""
-		molcolabl.className = ''
-		waterflk.classList.add("mt-0")
-		icecube.classList.add("mt-0")
-	}	
-}
 function showloupe(){
+
 	if (molcolid) {
-	molcolid.setAttribute("disabled","true")
-	chkair = true
+		chkair = true
 	}
+
 	loupeview.classList.remove("hide")
+	degcanvas.classList.remove("hide")
 	tempctrl()
 	refill()
+	if(ballon){
+		scnctxt.classList.add("hide")
+	}
 }
+
 function showAloupe(){
-	console.log("you clicked on the ballon")
-	molcolid.removeAttribute("disabled")
-	loupeview.classList.remove("hide")
+	frozensnctxtctl()
 	chkair = false
 	tempctrl()
 	refill()
+	loupeview.classList.remove("hide")
 }
+
+
+function snctxtctl(){
+	if (ballon){
+	  	scnctxt.classList.add("hide")
+	  	degcanvas.classList.remove("hide")
+	 }
+	  	
+}
+
+function frozensnctxtctl(){
+	airfrozen = temprect.getAttribute("height")
+	if (airfrozen == 513 ){
+		degcanvas.classList.add("hide")
+		scnctxt.classList.remove("hide")
+	}
+}
+
 
 function tempctrl(){
 	  amplitude = temprect.getAttribute("height")
 	  switch (amplitude){
+
+	// at -293 degrees
     case '513':
       degOutpt.innerHTML ="-273"+ " &deg;C"
-      waterflk.className = 'hide'
-	  icecube.className = ''
-	  if (molcolabl) {
-	  	molcolabl.className = 'hidden'
-	    ballon.className = "hide"
+      waterflk.classList.add("hide")
+	  icecube.classList.remove("hide")
+	  console.log(chkair)
+	  if (chkair == false) {
+	  	frozensnctxtctl()
 	  }
       break
+
+    // at -89 degrees
     case '293':
       if (chkair == false) {
       	wmolnum = 1
       	amolnum = 60
       }
       degOutpt.innerHTML ="-89"+ " &deg;C"
-      waterflk.className = 'hide'
-	  icecube.className = ''
-	  molcolattset()
+      waterflk.classList.add("hide")
+	  icecube.classList.remove("hide")
+	  // molcolattset()
+	  snctxtctl()
       break
+
+    // at -15 degrees
     case '218':
       if (chkair == false) {
       	wmolnum = 1
       	amolnum = 60
       }
       degOutpt.innerHTML ="-15"+ " &deg;C"
-      waterflk.className = 'hide'
-	  icecube.className = ''
-	  molcolattset()
+      waterflk.classList.add("hide")
+	  icecube.classList.remove("hide")
+	  // molcolattset()
+	  snctxtctl()
       break
+    
+    // at 2 degrees
     case '143':
       if (chkair == false) {
       	wmolnum = 2
       	amolnum = 60
       }
       degOutpt.innerHTML ="2"+ " &deg;C"
-      waterflk.className = ''
-	  icecube.className = 'hide'
-	  molcolattset()
+      waterflk.classList.remove("hide")
+	  icecube.classList.add("hide")
+	  // molcolattset()
+	  snctxtctl()
       break
+    
+    // at 20 degrees
     case '107':
       if (chkair == false) {
       	wmolnum = 3
       	amolnum = 60
       }
       degOutpt.innerHTML ="20"+ " &deg;C"
-      waterflk.className = ''
-	  icecube.className = 'hide'
-	  molcolattset()
+      waterflk.classList.remove("hide")
+	  icecube.classList.add("hide")
+	  // molcolattset()
+	  snctxtctl()
       break
+    
+    // at 50 degrees
     case '54':
       if (chkair == false) {
       	wmolnum = 4
       	amolnum = 60
       }
       degOutpt.innerHTML ="50"+ " &deg;C"
-      waterflk.className = ''
-	  icecube.className = 'hide'
-	  molcolattset()
+      waterflk.classList.remove("hide")
+	  icecube.classList.add("hide")
+	  // molcolattset()
+	  snctxtctl()
       break
   }
   //degrs = this.getAttribute("data-add")
   changeTemptxt()
 }
-
-function particlesactn(){
-	var theid = this.getAttribute("id")
-	switch (theid){
-		case 'n273deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			ballon.className = "hide"
-			molcolabl[0].className = 'hidden'
-			break
-		case 'n89deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			molcolabl[0].className = ''
-			icecube.classList.add("mt-0")
-			ballon.className = ""
-			break
-		case 'n15deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			molcolabl[0].className = ''
-			icecube.classList.add("mt-0")
-			ballon.className = ""
-			break
-		case '2deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			molcolattset()
-			break
-		case '20deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			molcolabl[0].className = ''
-			molcolattset()
-			break
-		case '50deg':
-			for (var i = 0; i < loupeviewEl.length; i++) {
-				loupeviewEl[i].className = "hide"
-			}
-			degcanvas.className = ""
-			molcolabl[0].className = ''
-			molcolattset()
-			break
-		default:
-			// for (var i = 0; i < loupeviewEl.length; i++) {
-			// 	loupeviewEl[i].className = "hide"
-			// }
-
-	}
-}
-
 
 // Change color of air molecules
 function chgaircol(value){

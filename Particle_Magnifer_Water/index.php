@@ -17,8 +17,11 @@
 						<span id="waterOutput">Ice</span>
 					</h1>
 					<div class="elements">
-						<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
-						<img id="waterflk" class="hide" src="../assets/img/beaker.svg" alt="Water flask">
+						<div class="elcontainer">
+							<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
+							<div id="waterflk" class="hide">
+							</div>
+						</div>
 					</div> <!-- end .elements -->
 				</div> <!-- end .ice -->
 
@@ -44,7 +47,6 @@
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
-		
 	</div> <!-- end .module-container -->
 
 
