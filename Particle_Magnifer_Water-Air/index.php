@@ -62,6 +62,18 @@
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
+		<div style="max-width: 1000px; margin: 40px auto">
+			<!-- <p>There is no option to view air particles at -273°C, since at this temperature there would be no gaseous form of matter. Nitrogen, oxygen, and all of the elements that usually compose our atmosphere would be solids before the temperature reached absolute zero.</p> -->
+		
+			</br>
+			</br>
+			<a href="https://davidjd.com/dev/TERC/Particle_Magnifer_Water">Particle Magnifier with Water</a>
+			</br>
+			</br>
+			<a class="github-button" href="https://github.com/ekspresyon/terc" data-size="large" aria-label="Download ekspresyon/terc on GitHub">GitHub</a>
+			<!-- Place this tag where you want the button to render. -->
+			<a class="github-button" href="https://github.com/ekspresyon/terc/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ekspresyon/terc on GitHub">Download</a>
+		</div>
 	</div> <!-- end .module-container -->
 
 

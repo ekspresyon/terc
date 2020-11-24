@@ -47,6 +47,16 @@
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
+		<div style="max-width: 1000px; margin: 40px auto">			
+			</br>
+			</br>
+			<a href="https://davidjd.com/dev/TERC/Particle_Magnifer_Water-Air/">Particle Magnifier with Water and Air</a>
+			</br>
+			</br>
+			<a class="github-button" href="https://github.com/ekspresyon/terc" data-size="large" aria-label="Download ekspresyon/terc on GitHub">GitHub</a>
+			<!-- Place this tag where you want the button to render. -->
+			<a class="github-button" href="https://github.com/ekspresyon/terc/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ekspresyon/terc on GitHub">Download</a>
+		</div>
 	</div> <!-- end .module-container -->
 
 

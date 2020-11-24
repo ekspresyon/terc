@@ -30,7 +30,7 @@
   <a id="50deg" data-add="50" cursor="pointer">
     <g data-add="54">
       <rect x="125" y="50" width="50" height="20" style="fill:#cccccc;"/>
-      <text x="128" y="65">50&deg;C</text>
+    	<text x="128" y="65">50&deg;C</text>
     </g>
   </a>
 
@@ -39,14 +39,14 @@
   <a id="20deg" data-add="20" cursor="pointer">
     <g data-add="107">
       <rect x="125" y="101" width="50" height="20" style="fill:#cccccc;"/>
-      <text data-add="107" x="128" y="117">20&deg;C</text>
+    	<text data-add="107" x="128" y="117">20&deg;C</text>
     </g>
   </a>
 
   <a id="2deg" data-add="2" cursor="pointer">
     <g data-add="143">
       <rect x="125" y="140" width="50" height="20" style="fill:#cccccc;"/>
-      <text x="128" y="155">2&deg;C</text>
+    	<text x="128" y="155">2&deg;C</text>
     </g>
   </a>
 
@@ -62,14 +62,14 @@
   <a id="n89deg" data-add="-89" cursor="pointer">
     <g data-add="293">
       <rect x="125" y="289" width="50" height="20" style="fill:#cccccc;"/>
-      <text x="128" y="304">-89&deg;C</text>
+    	<text x="128" y="304">-89&deg;C</text>
     </g>
   </a>
 
   <a id="n273deg" data-add="-273" cursor="pointer">
     <g data-add="513">
       <rect x="125" y="509" width="50" height="20" style="fill:#cccccc;"/>
-      <text x="128" y="524">-273&deg;C</text>
+    	<text x="128" y="524">-273&deg;C</text>
     </g>
   </a>
 
@@ -98,7 +98,7 @@
         <tspan x="0" y="313">air temp.</tspan>
         <tspan x="0" y="325">on earth</tspan>
     </text>
-    <text x="0" y="604">
+  	<text x="0" y="604">
         <tspan x="0" y="524">absolute</tspan>
         <tspan x="0" y="534">zero</tspan>
     </text>
