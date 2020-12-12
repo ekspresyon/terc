@@ -16,14 +16,15 @@
 		      	<div class="matter-state flex-child">
 					<h1>
 						<span id="degOutpt">-273 &deg;C</span></br></br>
-						<span id="waterOutput">Ice</span>
+						<span id="">Air</span>
 					</h1>
 					<div class="elements">
-						<img id="ballon" src="../assets/img/loupe.svg" class="" alt="Air ballon">
-						<div class="elcontainer" style="margin-top: 65px;">
+						<img id="ballon" src="../assets/img/loupe.svg" class="" alt="Air">
+						<h1 id="waterOutput">Ice</h1>
+						<div class="elcontainer">
 							<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
-							<div id="waterflk" class="hide">
-							</div>
+							<div id="waterflk" class="hide"></div>
+							<img id="ballon2" src="../assets/img/loupe.svg" class="" alt="Click to View">		
 						</div>
 					</div> <!-- end .elements -->
 				</div> <!-- end .ice -->
@@ -62,19 +63,6 @@
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
-		<div style="max-width: 1000px; margin: 40px auto">
-			<!-- <p>There is no option to view air particles at -273°C, since at this temperature there would be no gaseous form of matter. Nitrogen, oxygen, and all of the elements that usually compose our atmosphere would be solids before the temperature reached absolute zero.</p> -->
-		
-			</br>
-			</br>
-			<a href="https://davidjd.com/dev/TERC/Particle_Magnifer_Water">Particle Magnifier with Water</a>
-			</br>
-			</br>
-			<a class="github-button" href="https://github.com/ekspresyon/terc" data-size="large" aria-label="Download ekspresyon/terc on GitHub">GitHub</a>
-			<!-- Place this tag where you want the button to render. -->
-			<a class="github-button" href="https://github.com/ekspresyon/terc/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ekspresyon/terc on GitHub">Download</a>
-		</div>
-	</div> <!-- end .module-container -->
 
 
 

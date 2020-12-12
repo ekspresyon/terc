@@ -10,7 +10,7 @@ var scnctxt = document.getElementById("scnctxt")
 var loupeview = document.getElementById("loupe-view")
 var loupeviewEl = document.querySelectorAll("#loupe-view div")
 var icecube = document.getElementById("icecube")
-var icecube = document.getElementById("icecube")
+var magwatrice = document.getElementById("ballon2")
 var waterflk = document.getElementById("waterflk")
 var ballon = document.getElementById("ballon")
 
@@ -50,6 +50,7 @@ var ballonactv = false
 // start listenning to clicks
 icecube.addEventListener("click", showloupe)
 waterflk.addEventListener("click", showloupe)
+magwatrice.addEventListener("click", showloupe)
 
 // Only when looking at air and water module, start listenning to clicks on air
 if (ballon) {
@@ -61,7 +62,6 @@ for (var i = 0; i < temps.length; i++) {
 	temps[i].addEventListener("click", changeTemp)
 	tempstxt[i].addEventListener("click", tempvalue)
 	tempstxt[i].addEventListener("click", tempctrl)
-	// tempstxt[i].addEventListener("click", particlesactn)
 }
 
 // Change displayed temperature on click of thermometer temp value
@@ -79,17 +79,11 @@ function tempvalue(){
 
 // Empelement state label change on click based on temp
 function changeTemptxt(){
-		if(chkair == true){			
 			if (degrsmark > 0) {
 				waterOutput.innerHTML = "Water"
 			}else{		
 				waterOutput.innerHTML = "Ice"
 			}
-		}else if(degrsmark == -273){			
-			waterOutput.innerHTML = "Ice"
-		}else{
-			waterOutput.innerHTML = "Air and water"
-		}
 }
 		
 function showloupe(){
@@ -213,7 +207,6 @@ function tempctrl(){
 	  snctxtctl()
       break
   }
-  //degrs = this.getAttribute("data-add")
   changeTemptxt()
 }
 

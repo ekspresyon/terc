@@ -11,16 +11,16 @@
 						<?php require ('../assets/img/thermometer.svg'); ?>
 					</div>
 				</div>
-		      	<div class="matter-state flex-child">
+		      	<div class="matter-state flex-child" style="padding-top:50px;">
 					<h1>
 						<span id="degOutpt">-273 &deg;C</span></br></br>
-						<span id="waterOutput">Ice</span>
 					</h1>
-					<div class="elements">
+					<div class="elements" >
+						<h1 id="waterOutput" style="margin-top:88px;margin-bottom:35px;">Ice</h1>
 						<div class="elcontainer">
 							<img id="icecube" src="../assets/img/ice_cube.svg" alt="Ice cube">
-							<div id="waterflk" class="hide">
-							</div>
+							<div id="waterflk" class="hide"></div>
+							<img id="ballon2" src="../assets/img/loupe.svg" class="" alt="Click to View">
 						</div>
 					</div> <!-- end .elements -->
 				</div> <!-- end .ice -->
@@ -47,17 +47,6 @@
 					</div>
 				</div> <!-- end .magnified -->
 		</div><!-- end .module-wrapper -->
-		<div style="max-width: 1000px; margin: 40px auto">			
-			</br>
-			</br>
-			<a href="https://davidjd.com/dev/TERC/Particle_Magnifer_Water-Air/">Particle Magnifier with Water and Air</a>
-			</br>
-			</br>
-			<a class="github-button" href="https://github.com/ekspresyon/terc" data-size="large" aria-label="Download ekspresyon/terc on GitHub">GitHub</a>
-			<!-- Place this tag where you want the button to render. -->
-			<a class="github-button" href="https://github.com/ekspresyon/terc/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download ekspresyon/terc on GitHub">Download</a>
-		</div>
-	</div> <!-- end .module-container -->
 
 
 
